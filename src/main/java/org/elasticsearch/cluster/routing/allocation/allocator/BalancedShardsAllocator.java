@@ -417,8 +417,8 @@ public class BalancedShardsAllocator extends AbstractComponent implements Shards
                                     }
                                     break;
                                 }
-                                if (logger.isTraceEnabled()) {
-                                    logger.trace("Balancing from node [{}] weight: [{}] to node [{}] weight: [{}]  delta: [{}]",
+                                if (logger.isInfoEnabled()) {
+                                    logger.info("Balancing from node [{}] weight: [{}] to node [{}] weight: [{}]  delta: [{}]",
                                             maxNode.getNodeId(), weights[highIdx], minNode.getNodeId(), weights[lowIdx], delta);
                                 }
                                 /* pass the delta to the replication function to prevent relocations that only swap the weights of the two nodes.
@@ -562,8 +562,8 @@ public class BalancedShardsAllocator extends AbstractComponent implements Shards
                         currentNode.addShard(initializingShard, decision);
                         routingNodes.assign(initializingShard, target.nodeId());
                         routingNodes.relocate(shard, target.nodeId()); // set the node to relocate after we added the initializing shard
-                        if (logger.isTraceEnabled()) {
-                            logger.trace("Moved shard [{}] to node [{}]", shard, currentNode.getNodeId());
+                        if (logger.isInfoEnabled()) {
+                            logger.info("Moved shard [{}] to node [{}]", shard, currentNode.getNodeId());
                         }
                         changed = true;
                         break;

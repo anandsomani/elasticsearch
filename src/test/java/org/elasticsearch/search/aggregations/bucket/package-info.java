@@ -20,7 +20,6 @@
 /**
  * Aggregations module
  */
-@TestLogging("org.elasticsearch.action.search.type:TRACE,cluster.routing.allocation:TRACE")
 package org.elasticsearch.search.aggregations.bucket;
 
 import org.elasticsearch.test.junit.annotations.TestLogging;

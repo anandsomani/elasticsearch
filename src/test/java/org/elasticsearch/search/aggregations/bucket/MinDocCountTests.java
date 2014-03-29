@@ -45,7 +45,6 @@ import static org.elasticsearch.search.aggregations.AggregationBuilders.*;
 import static org.elasticsearch.test.hamcrest.ElasticsearchAssertions.assertAllSuccessful;
 
 
-@TestLogging("_root:TRACE")
 public class MinDocCountTests extends ElasticsearchSharedIntegrationTest {
 
     private static final QueryBuilder QUERY = QueryBuilders.termQuery("match", true);
